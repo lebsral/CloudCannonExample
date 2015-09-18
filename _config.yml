@@ -1,0 +1,12 @@
+collections:
+  staff:
+    output: true
+defaults:
+  - scope:
+      path: ""
+      type: "staff"
+    values:
+      layout: "staff_member"
+collections:
+    - services
+    
