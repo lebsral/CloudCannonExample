@@ -9,4 +9,8 @@ defaults:
       layout: "staff_member"
 collections:
     - services
-    
+name: Creative Agency
+url: http://creative.com
+author:
+    name: Mike
+    email: mike@creative.com
