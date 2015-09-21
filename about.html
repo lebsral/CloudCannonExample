@@ -1,6 +1,8 @@
 ---
 layout: default
 title: About
+user:
+    name: me
 ---
 
 <section class="bg-dark">
@@ -19,5 +21,49 @@ title: About
                     <a href="#" class="btn btn-default btn-xl">Get Started!</a>
                 </div>
             </div>
+            
+Hello {{ name }}
+            Hello {{ page.layout }}
+            hello {{ page.title }}
+            
+Hello {{ page.type }}
+Hello {{ 'tobi' }}
+            
+        {{ site.name }}
+            {{ site.author.email }}
+            
+            We made 1 million dollars {% comment %} in losses {% endcomment %} this year
+            
+            <br>
+            {% raw %}
+  In Handlebars, {{ this }} will be HTML-escaped, but {{{ that }}} will not.
+{% endraw %}
+            <br>
+            {% if user %}
+  Hello {{ user.name }}
+{% endif %}
+            
+            <br>
+            
+<!--
+            collections:
+  staff:
+    output: true
+defaults:
+  - scope:
+      path: ""
+      type: "staff"
+    values:
+      layout: "staff_member"
+collections:
+    - services
+name: Creative Agency
+url: http://creative.com
+author:
+    name: Mike
+    email: mike@creative.com
+            
+-->
+            
         </div>
     </section>
